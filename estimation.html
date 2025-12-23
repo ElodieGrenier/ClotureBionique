@@ -54,15 +54,15 @@
                             <label class="form-label">3. Extras (Options ajoutées)</label>
                             <div class="form-check">
                                 <input class="form-check-input extra" type="checkbox" value="250" id="gate1">
-                                <label class="form-check-input-label" for="gate1">Ajouter une porte simple (+250$)</label>
+                                <label class="form-check-label" for="gate1">Ajouter une porte simple (+250$)</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input extra" type="checkbox" value="500" id="gate2">
-                                <label class="form-check-input-label" for="gate2">Ajouter une porte double (+500$)</label>
+                                <label class="form-check-label" for="gate2">Ajouter une porte double (+500$)</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input extra" type="checkbox" value="15" id="removal">
-                                <label class="form-check-input-label" for="removal">Retrait ancienne clôture (+15$/m)</label>
+                                <label class="form-check-label" for="removal">Retrait ancienne clôture (+15$/m)</label>
                             </div>
                         </div>
 
@@ -85,7 +85,7 @@
 </main>
 
 <footer class="text-center py-4 border-top">
-    <p>&copy; 2023 Clôtures Expert - Tous droits réservés.</p>
+    <p>&copy; 2025 Clôtures Bionique - Tous droits réservés.</p>
 </footer>
 
 <script>
@@ -112,6 +112,10 @@
         // Affichage avec formatage
         document.getElementById('totalPrice').innerText = total.toLocaleString('fr-CA');
     }
+     // Fonction calcul quand tableau est à zéro
+    document.querySelectorAll('#fenceForm input, #fenceForm select')
+.forEach(el => el.addEventListener('change', calculateTotal));
+
 </script>
 
 </body>

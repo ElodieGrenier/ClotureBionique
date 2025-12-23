@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clôtures Expert | Estimation Gratuite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section { background: #f8f9fa; padding: 60px 0; }
+        .result-box { background: #e9ecef; border-radius: 8px; padding: 20px; }
+        #totalPrice { font-weight: bold; color: #198754; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Clôtures Expert</a>
+    </div>
+</nav>
+
+<header class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4">Obtenez une estimation gratuite</h1>
+        <p class="lead">Calculez le coût de votre projet en quelques clics.</p>
+    </div>
+</header>
+
+<main class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title mb-4">Calculateur de projet</h3>
+                    
+                    <form id="fenceForm">
+                        <div class="mb-3">
+                            <label for="material" class="form-label">1. Choisir le matériau (Prix au mètre linéaire)</label>
+                            <select class="form-select" id="material" required>
+                                <option value="0" selected disabled>Choisir...</option>
+                                <option value="45">Bois Traité (45$/m)</option>
+                                <option value="65">Cèdre Rouge (65$/m)</option>
+                                <option value="85">Vinyle / PVC (85$/m)</option>
+                                <option value="110">Aluminium (110$/m)</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="perimeter" class="form-label">2. Périmètre total (en mètres)</label>
+                            <input type="number" class="form-control" id="perimeter" placeholder="Ex: 50" min="1" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">3. Extras (Options ajoutées)</label>
+                            <div class="form-check">
+                                <input class="form-check-input extra" type="checkbox" value="250" id="gate1">
+                                <label class="form-check-input-label" for="gate1">Ajouter une porte simple (+250$)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input extra" type="checkbox" value="500" id="gate2">
+                                <label class="form-check-input-label" for="gate2">Ajouter une porte double (+500$)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input extra" type="checkbox" value="15" id="removal">
+                                <label class="form-check-input-label" for="removal">Retrait ancienne clôture (+15$/m)</label>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="result-box text-center">
+                            <h4>Estimation Totale : <span id="totalPrice">0</span> $</h4>
+                            <small class="text-muted">* Prix approximatif incluant l'installation de base.</small>
+                        </div>
+
+                        <div class="d-grid mt-4">
+                            <button type="button" onclick="calculateTotal()" class="btn btn-primary btn-lg">Calculer</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="text-center py-4 border-top">
+    <p>&copy; 2023 Clôtures Expert - Tous droits réservés.</p>
+</footer>
+
+<script>
+    function calculateTotal() {
+        // Récupération des valeurs
+        const materialPrice = parseFloat(document.getElementById('material').value) || 0;
+        const perimeter = parseFloat(document.getElementById('perimeter').value) || 0;
+        
+        // Calcul de base : Matériel x Périmètre
+        let total = materialPrice * perimeter;
+
+        // Calcul des extras
+        const extras = document.querySelectorAll('.extra:checked');
+        extras.forEach((extra) => {
+            if (extra.id === 'removal') {
+                // Si c'est le retrait, on multiplie par le périmètre
+                total += parseFloat(extra.value) * perimeter;
+            } else {
+                // Sinon on ajoute le montant fixe (portes)
+                total += parseFloat(extra.value);
+            }
+        });
+
+        // Affichage avec formatage
+        document.getElementById('totalPrice').innerText = total.toLocaleString('fr-CA');
+    }
+</script>
+
+</body>
+</html>

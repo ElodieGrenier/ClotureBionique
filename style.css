@@ -1,13 +1,8 @@
 /* BASES */
-.root{
-
-
-}
+.root {}
 
 
 
-
-/* Ajout Élo */
 
 /* Carte calculateur */
 .card {
@@ -28,9 +23,193 @@
     color: #198754;
 }
 
-        .hero-section { background: #f8f9fa; padding: 60px 0; }
-        .result-box { background: #e9ecef; border-radius: 8px; padding: 20px; }
-        #totalPrice { font-weight: bold; color: #198754; }
+.hero-section {
+    background: #f8f9fa;
+    padding: 60px 0;
+}
+
+.result-box {
+    background: #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#totalPrice {
+    font-weight: bold;
+    color: #198754;
+}
 
 
 
+
+
+/* CODE POUR MOBILE AJOUT AVEC GEMINI */
+
+/* Style des images pour qu'elles soient uniformes */
+.hero-img {
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Sur grand écran, on augmente la hauteur de l'image */
+@media (min-width: 768px) {
+    .hero-img {
+        height: 500px;
+    }
+}
+
+/* Style des 3 cercles d'icônes sur Mobile */
+.mobile-icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    transition: transform 0.2s ease;
+}
+
+.mobile-icon-circle:active {
+    transform: scale(0.9);
+    /* Effet de pression au clic */
+}
+
+/* Supprime les marges Bootstrap par défaut sur la rangée hero */
+.row.g-0 {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+CSS
+
+/* Style pour la section À Propos */
+section h2 {
+    position: relative;
+}
+
+/* Ajoute un petit trait décoratif sous le titre sur mobile */
+@media (max-width: 768px) {
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+.tracking-wider {
+    letter-spacing: 2px;
+}
+
+/* Effet d'élévation sur la carte noire */
+.bg-dark.shadow-lg {
+    transition: transform 0.3s ease;
+}
+
+.bg-dark.shadow-lg:hover {
+    transform: translateY(-5px);
+}
+
+
+/* --- Page Estimation ajout GEMENI --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.title-stylish {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.underline-custom {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-custom::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: #ffc107;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.rounded-4 {
+    border-radius: 1.5rem !important;
+}
+
+.shadow-btn {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hover-scale:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 767px) {
+    .title-stylish {
+        font-size: 2.2rem !important;
+        text-align: center;
+    }
+
+    .display-5 {
+        font-size: 2.5rem !important;
+    }
+
+    .card-header h3 {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* FOOTER -page estimation*/
+
+
+/* FOOTER -icones*/
+.hover-warning:hover {
+    color: #ffc107 !important;
+    transition: 0.3s;
+}
+
+.hover-white:hover {
+    color: white !important;
+    text-decoration: underline !important;
+}
+
+/* Style de la modal */
+.modal-content {
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+}
+
+footer a:hover {
+    color: #ffc107 !important;
+    /* Jaune au survol des liens */
+    transition: 0.3s;
+}
+
+footer hr {
+    margin: 2rem auto;
+}
+
+/* Style spécifique pour les petits écrans */
+@media (max-width: 768px) {
+    footer {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    footer .small {
+        font-size: 0.8rem;
+        /* Un peu plus petit sur mobile pour éviter les gros blocs */
+    }
+}

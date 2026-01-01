@@ -4,56 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clôture Bionique - Estimation </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="tableauestimation.js">
+    <title>Clôtures Bionique - Estimation Gratuite</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <!-- NAVBAR -->
+<body class="bg-light">
+
     <header>
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">Clôtures Bionique</a>
+                <a class="navbar-brand fw-bold fs-3" href="index.html">
+                    Clôtures <span class="text-warning">B</span>ionique
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item mx-2"><a class="nav-link text-white active fw-semibold"
+                                href="estimation.html">Estimation rapide</a></li>
+                        <li class="nav-item mx-2"><a class="nav-link text-white fw-semibold" href="#">Réalisations</a>
+                        </li>
+                        <li class="nav-item ms-lg-3"><a class="btn btn-outline-warning px-4 rounded-pill"
+                                href="#">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-
-            <ul class="nav justify-content-center mx-5">
-                <li class="nav-item">
-                    <a class="nav-link text-white active" aria-current="page" href="estimation.html">Estimation
-                        rapide</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Réalisations</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Contact</a>
-                </li>
-
-            </ul>
         </nav>
-
     </header>
 
     <main class="container my-5">
-        <section class="hero-section text-center">
-            <div class="container">
-                <h1 class="display-4">Obtenez une estimation gratuite</h1>
-                <p class="lead">Calculez le coût de votre projet en quelques clics.</p>
-            </div>
+        <section class="text-center mb-2">
+            <h1 class="display-3 fw-black title-stylish mb-3">
+                Estimation <span>rapide</span>
+            </h1>
         </section>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card shadow">
-                    <div class="card-body">
-                        <h3 class="card-title mb-4">Calculateur de projet</h3>
 
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                    <div class="card-header bg-warning py-3">
+                        <h3 class="card-title mb-0 fw-bold text-center text-dark">Calculateur de projet</h3>
+                    </div>
+                    <div class="card-body p-4 p-md-5 bg-white">
                         <form id="fenceForm">
-                            <div class="mb-3">
-                                <label for="material" class="form-label">1. Choisir le matériau (Prix au mètre
-                                    linéaire)</label>
-                                <select class="form-select" id="material" required>
-                                    <option value="0" selected disabled>Choisir...</option>
+                            <div class="mb-4">
+                                <label for="material" class="form-label fw-bold">1. Choisir le matériau</label>
+                                <select class="form-select form-select-lg rounded-3" id="material" required>
+                                    <option value="0" selected disabled>Sélectionnez un type...</option>
                                     <option value="45">Bois Traité (45$/m)</option>
                                     <option value="65">Cèdre Rouge (65$/m)</option>
                                     <option value="85">Vinyle / PVC (85$/m)</option>
@@ -61,21 +64,22 @@
                                 </select>
                             </div>
 
-                            <div class="mb-3">
-                                <label for="perimeter" class="form-label">2. Périmètre total (en mètres)</label>
-                                <input type="number" class="form-control" id="perimeter" placeholder="Ex: 50" min="1"
-                                    required>
+                            <div class="mb-4">
+                                <label for="perimeter" class="form-label fw-bold">2. Périmètre total (mètres
+                                    linéaires)</label>
+                                <input type="number" class="form-control form-control-lg rounded-3" id="perimeter"
+                                    placeholder="Ex: 50" min="1" required>
                             </div>
 
-                            <div class="mb-3">
-                                <label class="form-label">3. Extras (Options ajoutées)</label>
-                                <div class="form-check">
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">3. Options supplémentaires</label>
+                                <div class="form-check mb-2">
                                     <input class="form-check-input extra" type="checkbox" value="250" id="gate1">
-                                    <label class="form-check-label" for="gate1">Ajouter une porte simple (+250$)</label>
+                                    <label class="form-check-label" for="gate1">Porte simple (+250$)</label>
                                 </div>
-                                <div class="form-check">
+                                <div class="form-check mb-2">
                                     <input class="form-check-input extra" type="checkbox" value="500" id="gate2">
-                                    <label class="form-check-label" for="gate2">Ajouter une porte double (+500$)</label>
+                                    <label class="form-check-label" for="gate2">Porte double (+500$)</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input extra" type="checkbox" value="15" id="removal">
@@ -84,68 +88,212 @@
                                 </div>
                             </div>
 
-                            <hr>
-
-                            <div class="result-box text-center">
-                                <h4>Estimation Totale : <span id="totalPrice">0</span> $</h4>
-                                <small class="text-muted">* Prix approximatif incluant l'installation de base.</small>
+                            <div class="result-box text-center py-4 bg-light rounded-4 mb-4">
+                                <h4 class="text-uppercase small fw-bold text-secondary mb-2">Total estimé</h4>
+                                <div class="display-5 fw-bold text-dark"><span id="totalPrice">0</span> $</div>
+                                <small class="text-muted d-block mt-2">*Prix incluant l'installation de base.</small>
                             </div>
 
-                            <div class="d-grid mt-4">
+                            <div class="d-grid gap-3">
                                 <button type="button" onclick="calculateTotal()"
-                                    class="btn btn-primary btn-lg">Calculer</button>
+                                    class="btn btn-dark btn-lg rounded-pill py-3 shadow-btn hover-scale fw-bold">
+                                    <i class="bi bi-calculator me-2"></i>Calculer
+                                </button>
+                                <button type="button" id="downloadPDF"
+                                    class="btn btn-outline-success border-2 rounded-pill py-2 fw-bold hover-scale">
+                                    <i class="bi bi-file-earmark-pdf me-2"></i>Télécharger le PDF
+                                </button>
                             </div>
                         </form>
-                        <div class="d-grid mt-3">
-                            <button type="button" id="downloadPDF" class="btn btn-success btn-lg">
-                                Télécharger l'estimation en PDF
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </main>
+    <footer class="bg-dark text-white py-5 mt-5 border-top border-secondary border-opacity-25">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
 
-    <footer class="text-center py-4 border-top">
-        <p>&copy; 2025 Clôtures Bionique - Tous droits réservés.</p>
+                <div class="col-md-4 text-center text-md-start">
+                    <h5 class="fw-bold text-warning mb-1">Clôtures Bionique</h5>
+                    <p class="mb-0 small text-muted">&copy; 2026 Tous droits réservés.</p>
+                 
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <div class="d-flex flex-column gap-2">
+                        <a href="tel:5140000000" class="text-white text-decoration-none fw-bold hover-warning">
+                            <i class="bi bi-telephone-fill text-warning me-2"></i>(514) 000-0000
+                        </a>
+                        <a href="mailto:info@cloturesbionique.com"
+                            class="text-white-50 text-decoration-none small hover-white">
+                            <i class="bi bi-envelope-fill me-2"></i>info@cloturesbionique.com
+                        </a>
+                        <div class="mt-2">
+                            <a href="https://www.facebook.com/profile.php?id=61575503810363&locale=fr_CA" target="_blank" class="text-white fs-4 hover-warning">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-center text-md-end">
+                    <h6 class="text-uppercase small fw-bold mb-2 text-secondary" style="letter-spacing: 1px;">
+                        Informations</h6>
+                    <button type="button" class="btn btn-link text-white-50 p-0 small text-decoration-none hover-white"
+                        data-bs-toggle="modal" data-bs-target="#modalTerms">
+                        Termes et conditions
+                    </button>
+                    <p class="small text-muted mt-2 mb-0">Estimation gratuite en ligne</p>
+                </div>
+
+            </div>
+        </div>
     </footer>
 
+    <div class="modal fade" id="modalTerms" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 shadow-lg">
+                <div class="modal-header bg-warning text-dark border-0">
+                    <h5 class="modal-title fw-bold">Conditions de l'estimation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 text-dark">
+                    <p class="fw-bold">Prendre note :</p>
+                    <ul class="small">
+                        <li class="mb-2">Estimation indicative (visite sur place requise).</li>
+                        <li class="mb-2">Prix basés sur un sol de terre standard.</li>
+                        <li class="mb-2">Les matériaux sont sujets aux fluctuations du marché.</li>
+                        <li class="mb-2">Confirmation finale après analyse technique.</li>
+                    </ul>
+                    <div class="text-center mt-3">
+                        <button type="button" class="btn btn-dark rounded-pill px-4" data-bs-dismiss="modal">J'ai
+                            compris</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTerms" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4">
+                <div class="modal-header bg-warning text-dark border-0">
+                    <h5 class="modal-title fw-bold">Conditions de l'estimation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 text-dark">
+                    <p><strong>Note importante :</strong> L'estimation fournie par cet outil est une approximation basée
+                        sur les informations saisies.</p>
+                    <ul class="small">
+                        <li class="mb-2">Une visite sur place est requise pour valider le prix final.</li>
+                        <li class="mb-2">Les prix incluent l'installation standard en terrain de terre.</li>
+                        <li class="mb-2">Des frais supplémentaires s'appliquent pour le roc ou le béton.</li>
+                        <li class="mb-2">Les prix des matériaux sont sujets aux changements du marché.</li>
+                    </ul>
+                    <div class="text-center mt-3">
+                        <button type="button" class="btn btn-dark rounded-pill px-4" data-bs-dismiss="modal">J'ai
+                            compris</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <script>
+        // --- FONCTION DE CALCUL ---
         function calculateTotal() {
-            // Récupération des valeurs
-            const materialPrice = parseFloat(document.getElementById('material').value) || 0;
+            const materialSelect = document.getElementById('material');
+            const materialPrice = parseFloat(materialSelect.value) || 0;
             const perimeter = parseFloat(document.getElementById('perimeter').value) || 0;
 
-            // Calcul de base : Matériel x Périmètre
             let total = materialPrice * perimeter;
 
-            // Calcul des extras
             const extras = document.querySelectorAll('.extra:checked');
             extras.forEach((extra) => {
                 if (extra.id === 'removal') {
-                    // Si c'est le retrait, on multiplie par le périmètre
                     total += parseFloat(extra.value) * perimeter;
                 } else {
-                    // Sinon on ajoute le montant fixe (portes)
                     total += parseFloat(extra.value);
                 }
             });
 
-            // Affichage avec formatage
             document.getElementById('totalPrice').innerText = total.toLocaleString('fr-CA');
         }
-        // Fonction calcul quand tableau est à zéro
-        document.querySelectorAll('#fenceForm input, #fenceForm select')
-            .forEach(el => el.addEventListener('change', calculateTotal));
 
+        // Met à jour le calcul automatiquement quand on change une option
+        document.querySelectorAll('#fenceForm input, #fenceForm select').forEach(el => {
+            el.addEventListener('change', calculateTotal);
+        });
+
+        // --- GÉNÉRATION DU PDF ---
+        document.getElementById('downloadPDF').addEventListener('click', function () {
+            // Initialisation de jsPDF
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Récupération des infos actuelles
+            const total = document.getElementById('totalPrice').innerText;
+            const matSelect = document.getElementById('material');
+            const materialName = matSelect.options[matSelect.selectedIndex].text;
+            const perimeter = document.getElementById('perimeter').value || 0;
+
+            // --- DESIGN DU DOCUMENT ---
+            // Titre Principal
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(22);
+            doc.text("CLÔTURES BIONIQUE", 105, 20, { align: "center" });
+
+            doc.setFontSize(14);
+            doc.setFont("helvetica", "normal");
+            doc.text("Estimation de projet", 105, 30, { align: "center" });
+            doc.line(20, 35, 190, 35); // Ligne de séparation
+
+            // Détails du prix
+            doc.setFontSize(12);
+            doc.text(`Matériau : ${materialName}`, 20, 50);
+            doc.text(`Périmètre : ${perimeter} mètres linéaires`, 20, 60);
+
+            // Affichage du Total en gros et vert
+            doc.setFontSize(18);
+            doc.setTextColor(25, 135, 84); // Vert Bootstrap
+            doc.text(`TOTAL ESTIMÉ : ${total} $`, 20, 80);
+
+            // --- BLOC DES CONDITIONS (Ce que tu voulais intégrer) ---
+            doc.setTextColor(0, 0, 0); // Retour au noir
+            doc.line(20, 90, 190, 90);
+
+            doc.setFontSize(10);
+            doc.setFont("helvetica", "bold");
+            doc.text("TERMES ET CONDITIONS :", 20, 100);
+
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(9);
+            const conditions = [
+                "1. Cette estimation est purement indicative et doit être validée par une visite sur place.",
+                "2. Les prix sont basés sur un sol standard (terre). Des frais s'appliquent pour le roc ou le béton.",
+                "3. Le client est responsable de confirmer les limites de propriété et dégager les accès.",
+                "4. Les prix des matériaux sont valides pour une durée de 15 jours suivant l'émission du PDF.",
+                "5. L'évaluation finale est sujette à l'analyse des pentes et des contraintes techniques du terrain."
+            ];
+
+            let yPos = 108;
+            conditions.forEach(line => {
+                doc.text(line, 20, yPos);
+                yPos += 7; // Espace entre les lignes
+            });
+
+            // Bas de page
+            doc.setFontSize(10);
+            doc.setFont("helvetica", "italic");
+            doc.text("Merci de faire confiance à l'expertise de Clôture Bionique.", 105, 160, { align: "center" });
+
+            // Lancement du téléchargement
+            doc.save("Estimation_Clotures_Bionique.pdf");
+        });
     </script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-
 </body>
 
 </html>

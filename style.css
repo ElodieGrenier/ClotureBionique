@@ -28,7 +28,9 @@
     color: #198754;
 }
 
-
+        .hero-section { background: #f8f9fa; padding: 60px 0; }
+        .result-box { background: #e9ecef; border-radius: 8px; padding: 20px; }
+        #totalPrice { font-weight: bold; color: #198754; }
 
 
 

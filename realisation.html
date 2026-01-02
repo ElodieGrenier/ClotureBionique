@@ -54,69 +54,57 @@
         </nav>
 
     </header>
-    <main class="py-5">
-        <h1 class="text-center mb-5 display-5 fw-bold">Nos réalisations</h1>
 
-        <div class="carousel-wrapper">
-            <button class="arrow-btn" data-bs-target="#carouselCloture" data-bs-slide="prev">
-                <i class="bi bi-chevron-left"></i>
-            </button>
+    <main class="container">
+        <h1 class="display-3">Nos réalisations</h1>
 
-            <div id="carouselCloture" class="carousel slide w-100">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-0">
-                            <div class="col-3 border-end border-white">
-                                <div class="position-relative">
-                                    <img src="https://images.unsplash.com/photo-1505843513577-22bb7d21ef45?w=500"
-                                        class="img-fluid w-100 d-block" alt="1">
-                                    <span class="img-number">1</span>
-                                </div>
-                            </div>
-                            <div class="col-3 border-end border-white">
-                                <div class="position-relative">
-                                    <img src="https://images.unsplash.com/photo-1590053132132-4c5e9fc4fd6d?w=500"
-                                        class="img-fluid w-100 d-block" alt="2">
-                                    <span class="img-number">2</span>
-                                </div>
-                            </div>
-                            <div class="col-3 border-end border-white">
-                                <div class="position-relative">
-                                    <img src="https://images.unsplash.com/photo-1621506289937-4c7260005740?w=500"
-                                        class="img-fluid w-100 d-block" alt="3">
-                                    <span class="img-number">3</span>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="position-relative">
-                                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500"
-                                        class="img-fluid w-100 d-block" alt="4">
-                                    <span class="img-number">4</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="row">
+            <div class="carousel">
+                <div class="card"><img class="card-item w-100" src="images/piscine-fleuve-voilier.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/piscine-verre.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/piscine-verre-patio.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/piscine-aluminium.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/piscine-pave-verre.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/piscine-2.2.jpg" alt=""></div>
+            </div>
+            <div class="text">
+                <h2>Votre piscine</h2>
+                <p>Le charme naturel pour votre jardin.</p>
             </div>
 
-            <button class="arrow-btn" data-bs-target="#carouselCloture" data-bs-slide="next">
-                <i class="bi bi-chevron-right"></i>
-            </button>
-        </div>
+        </section>
 
-        <div class="container text-center mt-5 pt-4">
-            <div class="d-flex align-items-center justify-content-center gap-3">
-                <span class="quote">«</span>
-                <p class="display-6 mb-0">Texte</p>
-                <span class="quote">»</span>
+        <section class="row reverse">
+            <div class="carousel">
+                <div class="card"><img class="card-item w-100" src="images/porte-fleuve.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/terrain-2.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/terrain-4.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/terrain-métal.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/terrain-blanc.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/terrain-arche.jpg" alt=""></div>
             </div>
-        </div>
+            <div class="text">
+                <h2>Votre espace personnel</h2>
+                <p>La modernité sans entretien.</p>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="carousel">
+                <div class="card"><img class="card-item w-100" src="images/piscine-3.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/piscine-3.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/piscine-3.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/piscine-3.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/piscine-3.jpg" alt=""></div>
+                <div class="card"><img class="card-item w-100" src="images/piscine-3.jpg" alt=""></div>
+            </div>
+            <div class="text">
+                <h2>Réparation de structures</h2>
+                <p>Le charme naturel pour votre jardin.</p>
+            </div>
+        </section>
+
     </main>
-
-
-
-
-
 
     <!-- FOOTER -->
     <footer class="bg-dark text-white py-5 mt-5 border-top border-secondary border-opacity-25">
@@ -215,6 +203,11 @@
 
     <!-- JS -->
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function zoom(src) { document.getElementById('modalImg').src = src; }
+    </script>
+
 </body>
 
 </html>

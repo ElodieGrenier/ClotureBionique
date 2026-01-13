@@ -40,8 +40,27 @@
 }
 
 
+/* header*/
 
+/* Change la couleur des liens du menu au survol */
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+    /* Le jaune 'warning' de Bootstrap */
+    transition: color 0.3s ease;
+    /* Rend le changement de couleur fluide */
+}
 
+/* 3. L'INVERSION AU SURVOL */
+
+/* Quand on survole le logo, le texte blanc devient jaune */
+.navbar-brand:hover {
+    color: #ffc107 !important;
+}
+
+/* Quand on survole le logo, le "B" jaune devient blanc */
+.navbar-brand:hover .b-letter {
+    color: #ffffff !important;
+}
 
 /* CODE POUR MOBILE AJOUT AVEC GEMINI */
 
@@ -218,9 +237,58 @@ footer hr {
 
 /* PAGE-RÉALISATIONS  */
 
+/* Style spécifique pour vos carrousels de réalisations */
+.carousel-item .carousel-item img {
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+/* Bordure jaune subtile au survol du carousel */
+.carousel-item:hover .carousel-item img {
+    border-color: #ffc107;
+    /* Le jaune 'warning' de Bootstrap */
+}
+
+/* Personnalisation des indicateurs et flèches en jaune */
+.carousel-item .carousel-control-prev-icon,
+.carousel-item .carousel-control-next-icon {
+    background: #ffc107;
+    border-radius: 50%;
+    padding: 20px;
+    background-size: 50%;
+}
+
+/* Style des titres de section */
+.section-cloture h2 {
+    color: #343a40;
+    border-left: 5px solid #ffc107;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+/* Effet sur les liens de la navbar */
+.hover-warning:hover {
+    color: #ffc107 !important;
+}
+
 /* Importance des images (Plus hautes que larges) */
 .ratio-4x5 {
     --bs-aspect-ratio: 125%;
+}
+
+.carousel-item img {
+    height: 500px;
+    /* Ajuste la hauteur moyenne */
+    object-fit: cover;
+    /* Évite de déformer vos photos */
+    border-radius: 8px;
+}
+
+.section-cloture {
+    padding: 60px 0;
 }
 
 /* Effets Galerie */
@@ -271,5 +339,89 @@ footer hr {
 
     .fs-2 {
         font-size: 1.4rem !important;
+    }
+}
+
+
+
+/* ==========================================
+   STYLE GÉNÉRAL & TITRES
+   ========================================== */
+.text-warning {
+    color: #ffc107 !important;
+}
+
+/* Titre principal H1 avec grosse bordure */
+.section-cloture-main {
+    border-left: 8px solid #ffc107;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    font-weight: 900;
+}
+
+/* Titres de sections H2 avec bordure moyenne */
+.section-cloture h2 {
+    border-left: 5px solid #ffc107;
+    padding-left: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ==========================================
+   CARROUSELS DE RÉALISATIONS
+   ========================================== */
+.carousel-cloture .carousel-item img {
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Effet au survol */
+.carousel-cloture:hover .carousel-item img {
+    border-color: #ffc107;
+}
+
+/* Boutons de navigation jaunes */
+.carousel-cloture .carousel-control-prev-icon,
+.carousel-cloture .carousel-control-next-icon {
+    background-color: #ffc107;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background-size: 50%;
+}
+
+/* --- RÉDUCTION DES ESPACES (Page Réalisations & Estimation) --- */
+
+/* Réduit l'espace vertical des sections principales */
+.section-cloture {
+    padding: 20px 0 !important;
+    /* On passe de 60px à 20px */
+}
+
+
+
+/* Ajustement du titre principal pour qu'il colle plus au header */
+.section-cloture-main {
+    margin-top: 10px !important;
+    margin-bottom: 30px !important;
+    border-left: 8px solid #ffc107;
+    padding-left: 20px;
+}
+
+/* Réduit l'espace sous les titres H2 des sections */
+.section-cloture h2 {
+    margin-bottom: 10px !important;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+    .carousel-cloture .carousel-item img {
+        height: 300px;
+    }
+
+    .section-cloture-main {
+        font-size: 2.5rem;
     }
 }

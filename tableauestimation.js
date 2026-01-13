@@ -47,7 +47,7 @@ document.getElementById('downloadPDF').addEventListener('click', function () {
 
     // Titre
     doc.setFontSize(18);
-    doc.text("Estimation de projet Clôtures Bionique", 60, 20);
+    doc.text("Estimation de projet Clôture Bionique", 60, 20);
 
     // Infos
     doc.setFontSize(14);
